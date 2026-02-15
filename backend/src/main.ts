@@ -24,7 +24,7 @@ async function bootstrap() {
   );
 
   const port = process.env.PORT || 4000;
-  await app.listen(port);
-  console.log(`🚀 Backend running on http://localhost:${port}`);
+  await app.listen(port, '0.0.0.0');  // Listen on all interfaces for Render
+  console.log(`🚀 Backend running on port ${port}`);
 }
 bootstrap();
