@@ -3,6 +3,7 @@ uvicorn[standard]==0.32.0
 python-dotenv==1.0.1
 pydantic==2.10.0
 langchain==0.3.15
+langchain-community==0.3.15
 
 # OpenAI dependencies (commented out - using Groq instead)
 # langchain-openai==0.2.14
