@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ai-kb-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: LLM_SERVICE_URL
+        value: http://localhost:8000
+      - key: FRONTEND_URL
+        sync: false
+      - key: PORT
+        value: 4000
