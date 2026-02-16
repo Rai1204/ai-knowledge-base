@@ -44,8 +44,9 @@ class ChatService:
             model="llama-3.3-70b-versatile",
             groq_api_key=os.getenv("GROQ_API_KEY"),
         )
+        # Using L3 model (smaller) to fit in 512MB RAM
         self.embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-MiniLM-L6-v2"
+            model_name="sentence-transformers/all-MiniLM-L3-v2"
         )
 
     def chat(
